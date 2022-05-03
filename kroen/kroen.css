@@ -1,0 +1,750 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*startside start*/
+
+}
+li{
+  list-style: none;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+/*startside slut*/
+
+/* hamburger menu start*/
+
+.overskrift{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 60px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 0;
+  font-family: tangerine, cursive;
+}
+
+.linje-overskrift hr{
+   display: none;
+   color: black;
+}
+
+.navbar{
+  min-height: 70px;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px;
+
+}
+
+.nav-menu{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap:50px;
+  padding-top: 30px;
+  padding-bottom:30px;
+  z-index: 999;
+  list-style: none;
+}
+
+.nav-branding{
+  font-size: 2rem;
+}
+
+.nav-link{
+  font-family: roboto;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 15px;
+
+}
+
+.nav-link:hover{
+  color:#4B6587;
+
+}
+.hamburger{
+  display: none;
+  cursor: pointer;
+}
+
+.bar{
+  display:block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition:all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: black;
+}
+
+/*slideshow*/
+
+.slideshow{
+  width: 100%;
+  height: 350px;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+}
+
+.slideshow-item{
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  animation: cycleImages 31s infinite;
+  opacity: 0;
+}
+
+.slideshow-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoom 25s infinite;
+}
+
+.slideshow-item:nth-child(1),
+.slideshow-item:nth-child(1) img{
+  animation-delay: 0s;
+}
+
+.slideshow-item:nth-child(2),
+.slideshow-item:nth-child(2) img{
+  animation-delay: 10s;
+}
+
+.slideshow-item:nth-child(3),
+.slideshow-item:nth-child(3) img{
+  animation-delay: 20s;
+}
+
+
+@keyframes cycleImages{
+  25%{
+    opacity: 1;
+  }
+    40%{
+    opacity: 0;
+    }
+  }
+
+@keyframes zoom {
+  100%{
+    transform: scale(1.3);
+  }
+}
+
+/*slideshow slut*/
+
+
+
+
+.content{
+  width: 100%;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: white;
+}
+
+.content h1{
+  font-size: 50px;
+  margin-top: 80px;
+}
+
+.content p{
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 25px;
+}
+
+
+  /*hamburger menu slut*/
+
+  /*banner-restaurant*/
+
+  .banner-res{
+    width: 100%;
+    height: 400px;
+    background-image: url(./billeder/restaurant.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+  }
+
+
+  /*section 1*/
+#section1{
+  margin: 20px;
+  height:100%;
+}
+
+#section1 h1{
+  font-size: 60px;
+  font-family: tangerine, cursive;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+#section1 p{
+  font-size: 18px;
+  line-height:1.5;
+  font-family: roboto, sans-serif;
+  padding: 5px;
+}
+
+.row{
+  width: 100%;
+  margin-top: 100px;
+  display: flex;
+  justify-content: center;
+  flex-wrap:wrap;
+}
+
+.image{
+  background: black;
+  position: relative;
+  flex: 1;
+  height: 300px;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.image img{
+  opacity: 0.8;
+  position: relative;
+  transition: 0.6s;
+  transition-property: opacity;
+  max-width: 700px;
+  max-height: 500px;
+}
+
+.image:hover img{
+  opacity: 1;
+}
+
+.image .beskrivelse{
+  z-index: 1;
+  position: absolute;
+  top:0;
+  right: 0;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.image .beskrivelse h2{
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-top: 130px;
+  transition: 0.4s;
+  transition-property: transform;
+}
+
+.image:hover .beskrivelse h2 {
+transform: translateY(-30px);
+}
+
+.image .beskrivelse p{
+  margin: 30px 30px 0 30px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0;
+  transition: 0.6s;
+  transition-property: opacity, transform;
+}
+
+.image:hover .beskrivelse p{
+  opacity: 1;
+  transform: translateY(-40px);
+}
+
+.more{
+  position: absolute;
+  background:#d5caa8;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  bottom:-60px;
+  transition: 0.6s;
+  transition-property: bottom;
+}
+
+.image:hover .more{
+  bottom: 0;
+}
+
+.more .read-more{
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+
+/*section 1 slut*/
+
+/*selskaber*/
+
+#selskaber{
+  margin: 50px;
+  height:100%;
+}
+#selskaber h1{
+  font-size: 60px;
+  font-family: tangerine, cursive;
+  padding-bottom: 20px;
+  padding-top: 20px;
+}
+
+#selskaber h3{
+  font-size: 20px;
+  line-height:1.5;
+  font-family: roboto, sans-serif;
+  padding-bottom: 40px;
+}
+
+#selskaber p{
+  font-size: 16px;
+  line-height:1.5;
+  font-family: roboto, sans-serif;
+  padding: 5px;
+  padding-top: 15px;
+}
+
+
+/*restaurant*/
+
+.restaurant{
+    margin: 20px;
+    height:100%;
+}
+
+.res-info h2{
+  font-size: 60px;
+  padding-bottom: 30px;
+  font-family: tangerine,cursive;
+}
+
+.res-info p{
+    font-size: 18px;
+    margin:10px;
+    margin-bottom: 100px;
+    line-height: 2;
+    font-family: roboto,sans-serif;
+}
+
+/* Om os side*/
+
+.omos{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.omos .indhold img{
+  height: 100%;
+  width: 600px;
+  max-width: 100%;
+}
+
+.tekst{
+  width: 550px;
+  max-width: 100%;
+  padding: 0 10px;
+}
+
+.indhold{
+  width: 1280px;
+  max-width: 95%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-around;
+
+}
+
+.tekst h1{
+  color: black;
+  font-size: 50px;
+  margin-bottom: 20px;
+  text-transform: capitalize;
+}
+
+.tekst h5{
+  font-size: 25px;
+  margin-bottom: 25px;
+  letter-spacing: 2px;
+}
+
+.tekst p{
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 1px;
+  margin-bottom: 45px;
+}
+button{
+  background-color:#009688;
+  color: black;
+  border: 2px solid transparent;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px 30px;
+  border-radius: 30px;
+  font-size: 17px;
+  font-weight: bold;
+
+}
+
+button:hover{
+  transform: scale(1.2);
+  background-color: transparent;
+  border: 2px solid #009688;
+  color: #009688;
+  transition: .4s;
+  cursor: pointer;
+}
+
+/*ophold*/
+
+.ophold-info{
+  margin: 20px;
+  height:100%;
+}
+
+.ophold-info h1{
+  font-size: 60px;
+  font-family: tangerine, cursive;
+  padding-bottom: 20px;
+}
+
+.ophold-info h3{
+  font-size: 16px;
+  line-height:1.5;
+  font-family: roboto, sans-serif;
+  padding: 5px;
+}
+
+.container{
+    background:#e8e2d0;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 20px;
+    margin-bottom: 100px;
+}
+
+.ophold h2{
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.ophold h5{
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.ophold li{
+  font-size: 16px;
+  line-height: 1.8;
+}
+.pris-w p{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 40px;
+}
+
+/*opholdslut*/
+
+/*menu*/
+
+.menu{
+    width:100%;
+    height: auto;
+    display: flex;
+  justify-content: center;
+    padding-left:20px;
+    padding-right: 20px;
+    padding-bottom: 100px;
+    background-color: white;
+}
+
+.pris{
+  float: right;
+  font-size: 16px;
+}
+
+.understreget{
+  border-bottom: 2px dotted black;
+  padding-bottom: 2px;
+  margin-bottom: 3px;
+}
+
+.menuindhold h1{
+  font-size: 60px;
+  padding-bottom: 30px;
+  font-family: tangerine,cursive;
+}
+
+.menuindhold h3{
+  font-size: 30px;
+  text-align: center;
+  padding: 30px;
+}
+
+.menuindhold p{
+display: block;
+margin-block-start: 1em;
+margin-block-end: 1em;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
+font-size: 16px;
+}
+/*menu slut*/
+
+
+
+/*footer*/
+footer{
+  background:#d5caa8;
+  padding: 10px;
+}
+
+.title{
+  text-align: center;
+  letter-spacing: 2px;
+  margin: 10rem ;
+}
+
+.social-icons{
+  display: flex;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: -10px;
+}
+
+.social-icons li{
+  list-style: none;
+  padding: 10px;
+}
+
+.icons{
+  width: 100%;
+  max-width: 35px;
+}
+
+.main{
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding: 0 30px;
+}
+
+
+.links{
+  margin:10px 0;
+
+}
+.links h6{
+  font-size: 20px;
+  color: white;
+  font-family: roboto, sans-serif;
+  padding-bottom: 20px;
+  font-weight: bold;
+}
+
+.links{
+  margin: 16px 0;
+}
+
+.links p{
+  font-size: 13px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s ease;
+  line-height: 25px;
+  font-family: roboto, sans-serif, thin;
+  font-weight: lighter;
+}
+.copyright{
+  font-size: 10px;
+  text-align: center;
+  color:white;
+}
+/*footer slut*/
+
+/*kontakt*/
+
+.kontakt{
+  margin: 20px;
+  margin-bottom: 80px;
+}
+.kontakt h1{
+  font-size: 30px;
+  padding-bottom: 30px;
+}
+
+.kontakt h3{
+  font-size: 20px;
+  padding-bottom: 10px;
+  padding-top: 40px;
+}
+
+.kontakt h6{
+  font-size: 18px;
+  padding-bottom: 10px;
+  padding-top: 40px;
+}
+
+.kontakt p{
+  font-size: 16px;
+}
+.find-vej{
+  font-size: 30px;
+  margin-bottom: 100px;
+  margin: 20px;
+}
+
+  .find-vej h3{
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+
+  .find-vej p{
+    font-size: 16px;
+    padding-bottom: 3px;
+  }
+
+@media (max-width:750px){
+  .image{
+    flex: 100%;
+    max-width: 480px;
+  }
+}
+@media (max-width:400px){
+  .image .beskrivelse p{
+    font-size: 16px;
+  }
+  .more .read.more{
+    font-size: 18px;
+  }
+}
+
+
+@media screen and (min-width:700px) {
+  .container{
+    max-width: 700px;
+  }
+}
+
+@media screen and (min-width:1000px){
+  #selskaber{
+    margin: 80px;
+    height:100%;
+  }
+  .restaurant{
+    margin: 80px;
+    height:100%;
+  }
+
+  #section1{
+    margin: 80px;
+    height:100%;
+  }
+
+  .ophold-info{
+    margin: 80px;
+    height:100%;
+  }
+  .container{
+    margin: 80px;
+    height:100%;
+
+  }
+
+
+}
+
+@media (max-width:768px){
+  .hamburger{
+    display: block;
+  }
+  .hamburger.active .bar:nth-child(2){
+    opacity:0;
+  }
+  .hamburger.active .bar:nth-child(1){
+    transform: translateY(8px) rotate(-45deg);
+  }
+  .hamburger.active .bar:nth-child(3){
+    transform: translateY(-8px) rotate(-45deg);
+  }
+  .navbar{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+
+  }
+  .nav-menu{
+    position: fixed;
+    left: -100%;
+    top: 70px;
+    gap:0;
+    flex-direction: column;
+    background: white;
+    width: 100%;
+    text-align: center;
+    transition: 0.3s;
+  }
+
+  .nav-item{
+    margin: 16px 0;
+  }
+  .nav-menu.active{
+    left: 0;
+
+  }
+}
+
+
+
+@media screen and (max-width:700px){
+  .omos .indhold img{
+    margin-bottom: 35px;
+  }
+  .tekst h1{
+    font-size: 40px;
+    margin-bottom: 25px;
+  }
+  .ophold{
+    background:#D3DEDC;
+    width: 100%;
+    min-height: 400px;
+  }
+
+.kroophold{
+  background:#D3DEDC;
+  padding: 15px;
+  width: 100%;
+
+}
+
+
+/*section1*/
