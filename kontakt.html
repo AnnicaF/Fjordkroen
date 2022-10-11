@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="da" dir="ltr">
+  <head>
+    <meta name="description" content="Ring til os for at booke et ophold, gavekort eller reservere bord i restauranten. Vi glæder og til at høre fra dem.">
+    <meta charset="utf-8">
+    <title>Kontakt</title>
+    <meta name="format-detection" content="telephone=no">
+    <link rel="stylesheet" href="kroen.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@500&family=Tangerine&display=swap" rel="stylesheet">
+<script src="https://kit.fontawesome.com/ffac4b7b02.js" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.6.1.js"></script>
+<script>
+$(document).ready(function(){
+  $('#icon').click(function(){
+    $('ul').toggleClass('show');
+  });
+});
+</script>
+  </head>
+
+
+<body>
+<header>
+  <nav>
+
+    <label> <a id="logo" href="forside.html">Hotel Fjordkroen</a></label>
+  <ul>
+    <li>
+    <a class="sub-btn"href="#">MENUKORT <i class="fas fa-angle-down"></i></a>
+    <ul class="sub-menu">
+      <li class="sub-item"><a href="menukort.html">A la carte</a></li>
+      <li class="sub-item"><a href="frokostkort.html">Frokost</a></li>
+      <li class="sub-item"><a href="vinkort.html">Vinkort</a></li>
+    </ul>
+  </li>
+    <li><a href="kroophold.html">KROOPHOLD</a></li>
+    <li><a href="restaurant.html">RESTAURANT</a></li>
+    <li><a href="vaerelser.html">VÆRELSER</a></li>
+    <li><a href="selskaber.html">SELSKABER</a></li>
+    <li><a class="active" href="kontakt.html">KONTAKT</a></li>
+  </ul>
+  <label id="icon">
+    <i class="fas fa-bars"></i>
+  </label>
+  </nav>
+</header>
+<div class="banner-kontakt"></div>
+<section class="kontakt-side">
+  <h1>Åbningstider</h1>
+  <hr>
+<div class="kontakt">
+  <h3>Ring for bordbestilling, værelsesreservation,<br> køb af gavekort eller forespørgsel på fest. <br> +45 55 96 58 10</h3>
+</div>
+<div class="kontakt">
+<h6>Restaurant</h6>
+<p>Onsdag - Søndag: 17:00 - 21:00</p>
+<p>Lørdag - Søndag: 12:00 - 15:00</p>
+<h6>Reception</h6>
+<p>Indtjekning fra 15:00</p>
+<p>udtjekning inden 11:00</p>
+  <h6>Kontakt</h6>
+  <p>Bækkeskov Stræde 23</p>
+  <p>4733 Tappernøje</p>
+  <p>Tlf: + 45 55 96 58 10 </p>
+  <p>Email: mail@fjordkroen.com</p>
+</div>
+</section>
+<footer>
+    <div class="main">
+      <div class="links">
+        <h6>Kontakt</h6>
+        <p>Bækkeskov Stræde 23</p>
+        <p>4733 Tappernøje</p>
+        <p>Tlf:+45 55 96 58 10 </p>
+        <p>Email: mail@fjordkroen.com</p>
+    </div>
+      <div class="links">
+              <h6>Åbningstider</h6>
+              <p>Onsdag - Søndag: 17:00-21:00</p>
+              <p>Lørdag - Søndag: 12:00-15:00 </p>
+              <p>Indtjekning af værelser fra 15:00</p>
+
+      </div>
+          <div class="links">
+            <p><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2278.870460106947!2d12.030751815907944!3d55.16804248040107!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4652c386000ec601%3A0xf6219d49f24e892e!2sHotel%20Fjordkroen!5e0!3m2!1sen!2sdk!4v1650746048434!5m2!1sen!2sdk" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></p>
+
+          </div>
+
+                </div>
+
+      <div class="copyright">
+            <p>Copyright 2022 All rights reserved <br>Made by www.afrederiksen.dk</p>
+      </div>
+  </footer>
+  <script type="text/javascript">
+  $(document).ready(function(){
+    $(".sub-btn").click(function(){
+      $(this).next(".sub-menu").slideToggle();
+    });
+  });
+
+  </script>
+  </body>
+  </html>

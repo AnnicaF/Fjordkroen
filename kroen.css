@@ -1,0 +1,2367 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/*startside start*/
+/*startside slut*/
+
+/*hamburger menu start*/
+
+li .sub-menu{
+  position: absolute;
+  background: #E5E5E5;
+  top: 80px;
+  line-height: 40px;
+  list-style: none;
+  border-radius: 0 0 8px 8px;
+  box-shadow: 0 5px 25px rgb(0 0 0 / 20%);
+  pointer-events: none;
+  transform: translateY(10px);
+  opacity: 0;
+  z-index: 999;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+}
+
+li:hover .sub-menu{
+  pointer-events: all;
+  transform: translateY(0);
+  opacity: 1;
+}
+
+li .sub-menu .sub-item{
+  position: relative;
+padding: 2px 0;
+cursor: pointer;
+box-shadow: inset 0px -30px 5px -30px rgba(255, 255, 255, 0.2);
+}
+
+li .sub-menu .sub-item a{
+  color:black;
+  font-size: 1em;
+  text-decoration: none;
+  padding: 5px 20px;
+}
+li .sub-menu .sub-item a:hover{
+  text-decoration: underline;
+}
+@media (max-width:1106px){
+  li .sub-menu{
+    opacity: 1;
+    position: relative;
+    top: 0;
+    transform: translateX(10px);
+    border-radius: 5px;
+    overflow: hidden;
+    display: none;
+  }
+  li:hover .sub-menu{
+    transform: translateX(10px);
+  }
+  li .sub-menu .sub-item{
+    box-shadow: none;
+  }
+    li .sub-menu .sub-item:hover{
+      background: none;
+    }
+
+    li .sub-menu .sub-item a:hover{
+      transition: 0.3s;
+    }
+}
+
+
+
+
+nav{
+  height: 80px;
+  width: 100%;
+  background: #E5E5E5;
+  position: fixed;
+  top: 0;
+  z-index: 999;
+}
+
+nav #logo {
+  font-size: 35px;
+  font-family: tangerine, cursive;
+  font-weight: 300;
+  color: black;
+  padding: 0 40px;
+  line-height: 80px;
+  text-decoration: none;
+}
+nav ul{
+  float: right;
+  margin-right: 40px;
+}
+nav li{
+  display:inline-block;
+  margin: 0 8px;
+  line-height: 80px;
+}
+
+nav a{
+  color: black;
+  font-size: 18px;
+  text-decoration: none;
+  border: 1px solid transparent;
+}
+
+a.active,a:hover{
+  transition: .5s;
+}
+
+nav #icon{
+  color: black;
+  font-size: 30px;
+  line-height: 80px;
+  float: right;
+  margin-right: 40px;
+  cursor: pointer;
+  display: none;
+}
+
+@media (max-width:500px){
+  label.logo{
+    font-size: 35px;
+    padding-left: 50px;
+  }
+  nav ul{
+    float: none;
+    margin-right: 15px;
+  }
+  nav a{
+    font-size: 16px;
+    -webkit-transition: all .25s ease;
+-moz-transition: all .25s ease;
+-ms-transition: all .25s ease;
+-o-transition: all .25s ease;
+transition: all .25s ease;
+  }
+}
+
+@media (max-width:1200px){
+nav #icon{
+  display: block;
+}
+nav ul{
+  margin-right: 40px;
+  -webkit-font-smoothing: antialiased;
+}
+nav ul{
+  position: fixed;
+  width: 100%;
+  background:#d8d5cd;
+  top: 80px;
+  left: -100%;
+  text-align: center;
+  transition: all .5s;
+}
+nav li{
+  display: block;
+  margin:50px 0;
+  line-height: 30px;
+}
+nav a{
+  font-size: 20px;
+  -webkit-transition: all .25s ease;
+-moz-transition: all .25s ease;
+-ms-transition: all .25s ease;
+-o-transition: all .25s ease;
+transition: all .25s ease;
+}
+nav ul.show{
+  left:0;
+  z-index: 1;
+}
+}
+
+a.active,a:hover{
+  border: none;
+  color: #3f4638;;
+  text-decoration:underline;
+}
+/*slideshow*/
+
+.slideshow{
+  width: 100%;
+  height: 550px;
+  position: relative;
+  overflow: hidden;
+  background-color: black;
+}
+
+.slideshow-item{
+  width: inherit;
+  height: inherit;
+  position: absolute;
+  animation: cycleImages 31s infinite;
+  opacity: 0;
+}
+
+.slideshow-item img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  animation: zoom 25s infinite;
+}
+
+.slideshow-item:nth-child(1),
+.slideshow-item:nth-child(1) img{
+  animation-delay: 0s;
+}
+
+.slideshow-item:nth-child(2),
+.slideshow-item:nth-child(2) img{
+  animation-delay: 10s;
+}
+
+.slideshow-item:nth-child(3),
+.slideshow-item:nth-child(3) img{
+  animation-delay: 20s;
+}
+
+
+@keyframes cycleImages{
+  25%{
+    opacity: 1;
+  }
+    40%{
+    opacity: 0;
+    }
+  }
+
+@keyframes zoom {
+  100%{
+    transform: scale(1.3);
+  }
+}
+
+/*slideshow slut*/
+
+.content{
+  width: 100%;
+  position: absolute;
+  top:50%;
+  transform: translateY(-50%);
+  text-align: center;
+  color: white;
+}
+
+.content h1{
+  font-size: 50px;
+  margin-top: 80px;
+}
+
+.content p{
+  margin: 20px auto;
+  font-weight: 100;
+  line-height: 25px;
+}
+
+
+  /*hamburger menu slut*/
+
+  /*banner-restaurant*/
+
+  .banner-res{
+    width: 100%;
+    height: 400px;
+    background-image: url(./billeder/udstilling.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+
+  /*section forside 1*/
+#section1{
+  padding: 40px;
+  height:100%;
+  background-color:#EEEEEE;
+  padding-bottom: 50px;
+}
+
+#section1 h1{
+  font-size: 60px;
+  font-family: tangerine, cursive;
+  padding-top: 20px;
+  color: black;
+  font-weight: 300;
+}
+
+#section1 hr{
+  margin: 20px;
+  background:#3f4638;
+  height: 1px;
+  max-width: 200px;
+  border: none;
+}
+
+#section1 p{
+  font-size: 18px;
+  line-height:1.5;
+  font-family: parisplus-clair, sans-serif;
+  color: black;
+  font-weight: 300;
+  padding: 4px;
+}
+.rewards {
+  width: 100%;
+  height: auto;
+  display: flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap: wrap;
+}
+
+.rewards img{
+  height: 75px;
+  width: 75px;
+  margin: 20px;
+}
+
+.row{
+  width: 100%;
+  margin-top: 100px;
+  margin:20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap:wrap;
+}
+
+.image{
+  background: black;
+  position: relative;
+  flex: 1;
+  height: 400px;
+  margin: 20px;
+  overflow: hidden;
+}
+
+.image img{
+  opacity: 0.8;
+  position: relative;
+  transition: 0.6s;
+  transition-property: opacity;
+  max-width: 700px;
+  max-height: 500px;
+}
+
+.image:hover img{
+  opacity: 1;
+}
+
+.image .beskrivelse{
+  z-index: 1;
+  position: absolute;
+  top:0;
+  right: 0;
+  color: white;
+  width: 100%;
+  height: 100%;
+}
+
+.image .beskrivelse h2{
+  text-align: center;
+  font-size: 30px;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-top: 130px;
+  transition: 0.4s;
+  transition-property: transform;
+}
+
+.image:hover .beskrivelse h2 {
+transform: translateY(-30px);
+}
+
+.image .beskrivelse p{
+  margin: 30px 30px 0 30px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: center;
+  opacity: 0;
+  transition: 0.6s;
+  transition-property: opacity, transform;
+}
+
+.image:hover .beskrivelse p{
+  opacity: 1;
+  transform: translateY(-40px);
+}
+
+.more{
+  position: absolute;
+  background:#d5caa8;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px;
+  bottom:-60px;
+  transition: 0.6s;
+  transition-property: bottom;
+}
+
+.image:hover .more{
+  bottom: 0;
+}
+
+.more .read-more{
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+
+/*section 1 slut*/
+
+/*Section 2 forside start*/
+
+#section2{
+background-color: #E5E5E5;
+width: 100%;
+height: auto;
+padding-bottom: 100px;
+}
+
+#section2 p{
+  font-size: 18px;
+  line-height:1.7;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  padding: 5px;
+}
+
+#section2 h2{
+  font-size: 40px;
+  font-family: tangerine, cursive;
+  padding-bottom: 20px;
+  padding-top: 20px;
+  color: black;
+}
+
+.hvemervi-index{grid-area: a;}
+.hvemerviimg-index{grid-area: b;}
+
+
+#section2{
+  display: grid;
+  grid-template-areas:
+  'a'
+  'b';
+  justify-items:center;
+  padding: 40px;
+  padding-top: 40px;
+}
+
+.hvemerviimg-index img{
+height: 100%;
+width: 100%;
+align-items: center;
+padding-top: 20px;
+}
+
+.hvemervi-index hr {
+  margin: 10px;
+  background:#3f4638;
+  height: 1px;
+  max-width: 200px;
+  border: none;
+  }
+
+
+@media (min-width:550px){
+  .resimg-index img{
+  height: 100%;
+  max-width: 500px;
+  align-items: center;
+  }
+
+  .hvemerviimg-index img{
+  height: 100%;
+  width: 500px;
+  align-items: center;
+  }
+}
+
+@media (min-width:800px){
+
+  .hvemervi-index{grid-area: a;}
+  .hvemerviimg-index{grid-area: b;}
+
+  #section2{
+    display: grid;
+    grid-template-areas:
+    'a b';
+    grid-template-columns: 50% 50%;
+    grid-gap: 50px;
+    justify-content: center;
+    padding: 60px;
+    padding-top: 30px;
+  }
+
+  .hvemerviimg-index img{
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+overflow: hidden;
+  }
+}
+
+/*selskaber*/
+
+.banner-selskab{
+  width: 100%;
+  height: 400px;
+  background-image: url(./billeder/selskab.jpg);
+  background-repeat: no-repeat;
+  background-size:cover;
+  background-position: center;
+}
+
+#selskaber hr{
+  margin: 20px;
+  background:#3f4638;
+  height: 1px;
+  max-width: 200px;
+  border: none;
+}
+
+#selskaber{
+  padding:20px;
+  height:100%;
+  background-color: #EEEEEE;
+}
+
+@media (min-width:1100px){
+    #selskaber{
+      padding: 100px;
+}
+}
+
+
+#selskaber h1{
+  font-size: 60px;
+  font-family: tangerine, cursive;
+  padding-top: 20px;
+  color: black;
+  font-weight: 300;
+}
+
+#selskaber h3{
+  font-size: 20px;
+  line-height:1.5;
+  font-weight: 500;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 20px;
+}
+
+#selskaber p{
+  font-size: 18px;
+  line-height:1.5;
+  font-weight: 300;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 20px;
+}
+
+.cta-selskab {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #D8D8D8;
+}
+
+.cta-selskab h6{
+  font-size: 18px;
+  line-height:1.5;
+  font-weight: 400;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  margin: 10px;
+}
+
+.cta-selskab h2{
+  font-size: 18px;
+  line-height:1.5;
+  font-weight: 600;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.cta-selskab p{
+  font-size: 18px;
+  margin:10px;
+  margin-top: 20px;
+  line-height: 2;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 500;
+  margin: 10px;
+}
+#selskaber p{
+  font-size: 18px;
+  margin:10px;
+  margin-top: 20px;
+  line-height: 2;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 300;
+  margin: 20px;
+}
+
+#selskaber p span{
+  font-size: 18px;
+  line-height: 2;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 500;
+}
+.selskab-galleri{
+align-items: center;
+display: flex;
+flex-wrap: wrap;
+padding: 40px;
+background-color: #EEEEEE;
+}
+
+.sel1{
+  background-image:url(./billeder/selskab1.jpg);
+  background-size: 150%;
+  background-position: 50% 70%;
+  padding: 20px;
+}
+
+.sel3{
+  background-image:url(./billeder/selskab3.jpg);
+  background-size: 150%;
+  background-position: 50% 70%;
+padding: 20px;
+}
+.selsbillede{
+  position: relative;
+  width: 75vh;
+  height: 35vh;
+  margin: 2rem auto;
+  background-repeat: no-repeat;
+}
+
+.menu-container2{
+  background:#EEEEEE;;
+  padding-top: 30px;
+}
+.menu-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #EEEEEE;
+  padding-top: 50px;
+}
+.container-menu{
+  width: 90%;
+  max-width: 10000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #EEEEEE;
+}
+
+.container-menu2{
+  width: 90%;
+  max-width: 10000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #EEEEEE;
+  padding-bottom:100px;
+}
+
+.left-m{
+  width: 50%;
+  height: 500px;
+  background:url(./billeder/forret.jpg) no-repeat center / cover;
+  border-radius: 8px;
+}
+
+.left2-m{
+  width: 50%;
+  height:500px;
+  background:url(./billeder/dessert2.jpg) no-repeat center / cover;
+  border-radius: 8px;
+}
+
+.right-m{
+  background-color: #D8D8D8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 8px;
+  color: black;
+  margin-left: -140px;
+}
+.right2-m{
+  background-color: #D8D8D8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+  border-radius: 8px;
+  color: black;
+  margin-right: -140px;
+  z-index: 1;
+}
+
+
+.right-m h2{
+  font-size: 25px;
+  font-weight: 600;
+}
+.right-m li{
+  margin:10px 0;
+  font-weight: 500;
+  line-height: 15px;
+  list-style: none;
+  text-align: center;
+}
+
+.right2-m h2{
+  font-size: 25px;
+  font-weight: 600;
+}
+.right2-m li{
+  margin:10px 0;
+  font-weight: 500;
+  line-height: 1.2;
+  list-style: none;
+}
+.right2-m ul{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+}
+  .right-m ul{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+
+
+@media only screen and (max-width:768px){
+  .container-menu{
+    flex-direction: column;
+  }
+  .container-menu2{
+    flex-direction: column-reverse;
+    padding-top: 50px;
+  }
+  .left-m{
+    width: 100%;
+    height: 400px;
+  }
+
+  .left2-m{
+    width: 100%;
+    height: 400px;
+  }
+  .right-m{
+    width: 80%;
+    margin: 0;
+    margin-top: -100px;
+    display: flex;
+    align-items: center;
+  }
+
+  .right-m h2{
+    font-size: 30px;
+  }
+
+  .right-m ul{
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .right2-m{
+    width: 80%;
+    margin: 0;
+    margin-top: -100px;
+  }
+  .right2-m h2{
+    font-size: 30px;
+  }
+
+  .right2-m li{
+    font-size: 16px;
+    line-height: 1;
+
+  }
+}
+
+@media (max-width:500px){
+  .right2-m h2{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .right-m li{
+    font-size: 15px;
+    line-height: 1;
+  }
+  .right-m h2{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .right2-m li{
+    font-size: 15px;
+    line-height: 1;
+  }
+}
+
+/*restaurant*/
+
+.restaurant{
+    padding: 20px;
+    height:100%;
+   background-color: #EEEEEE;;
+}
+
+.res-info h2{
+  font-size: 60px;
+  padding-bottom: 10px;
+  font-family: tangerine,cursive;
+  font-weight: 300;
+}
+
+.res-info hr{
+  margin: 20px;
+  background: #3f4638;
+  height: 1px;
+  max-width: 200px;
+  border: none;
+}
+
+.res-info p{
+    font-size: 18px;
+    margin:10px;
+    margin-bottom: 80px;
+    margin-top: 20px;
+    line-height: 2;
+    font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-weight: 300;
+}
+.res-info h6{
+  font-size: 18px;
+  margin:10px;
+  margin-top: 20px;
+  line-height: 2;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 500;
+}
+
+
+.billeder-res{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  padding-bottom: 70px;
+  padding-top: 70px;
+  background-color:#EEEEEE;
+}
+
+.billed-menu{
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+
+.billed-menu img{
+ width: 300px;
+ height: 200px;
+margin: 10px;
+
+}
+.billed-menu .btn1{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 10px;
+}
+
+
+.billed-vin{
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+}
+
+.billed-vin img{
+  width: 300px;
+  height: 200px;
+  margin: 10px;
+
+}
+.billed-vin .btn2{
+  position: absolute;
+  top: 45%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  color: black;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+@media (min-width:750px) {
+  .billeder-res{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 70px;
+  }
+}
+@media (min-width:890px) {
+  .billeder-res{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding-bottom: 70px;
+    justify-content: space-around;
+
+  }
+  .billed-menu{
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .billed-menu img{
+   width: 350px;
+   height: 250px;
+   margin: 10px;
+  }
+  .billed-menu .btn1{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+  }
+
+  .billed-vin{
+    position: relative;
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .billed-vin img{
+    width: 350px;
+    height: 250px;
+    margin: 10px;
+
+  }
+  .billed-vin .btn2{
+    position: absolute;
+    top: 50%;
+    left: 60%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    border: none;
+    cursor: pointer;
+  }
+}
+
+@media (min-width:1000px) {
+  .billed-vin img{
+    width: 400px;
+    height: 300px;
+    margin: 10px;
+  }
+  .billed-vin{
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+  .billed-vin .btn2{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+
+
+  .billed-menu{
+    position: relative;
+    width: 100%;
+    max-width: 400px;
+  }
+  .billed-menu img{
+   width: 400px;
+   height: 300px;
+   margin: 10px;
+  }
+
+  .billed-menu .btn1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+  }
+}
+
+
+
+/*ophold*/
+
+.kro-container2{
+  background:#EEEEEE;;
+  padding-top: 30px;
+}
+.kro-container{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #EEEEEE;
+}
+.container-kro{
+  width: 90%;
+  max-width: 10000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #EEEEEE;
+}
+
+.container-kro2{
+  width: 90%;
+  max-width: 10000px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #EEEEEE;
+}
+
+.left{
+  width: 50%;
+  height: 600px;
+  background:url(./billeder/vinudstilling.jpg) no-repeat center / cover;
+  border-radius: 8px;
+}
+.left2{
+  width: 50%;
+  height: 600px;
+  background:url(./billeder/flasker.jpg) no-repeat center / cover;
+  border-radius: 8px;
+}
+.right{
+  width: 50%;
+  min-height: 400px;
+  background-color: #D8D8D8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 8px;
+  color: black;
+  margin-left: -140px;
+}
+.right2{
+  width: 50%;
+  min-height: 400px;
+  background-color: #D8D8D8;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
+  border-radius: 8px;
+  color: black;
+  margin-right: -140px;
+  z-index: 1;
+}
+
+
+.right h2{
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+
+}
+.right li{
+  margin:20px 0;
+  font-weight: 500;
+  line-height: 15px;
+
+}
+
+.right2 h2{
+  font-size: 30px;
+  font-weight: 500;
+  text-align: center;
+
+}
+.right2 li{
+  margin:10px 0;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+@media only screen and (max-width:768px){
+  .container-kro{
+    flex-direction: column;
+  }
+  .container-kro2{
+    flex-direction: column-reverse;
+    padding-top: 50px;
+  }
+  .left{
+    width: 100%;
+    height: 400px;
+  }
+  .left2{
+    width: 100%;
+    height: 400px;
+  }
+  .right{
+    width: 80%;
+    margin: 0;
+    margin-top: -100px;
+  }
+  .right h2{
+    font-size: 30px;
+  }
+
+  .right ul{
+    font-size: 16px;
+  }
+  .right2{
+    width: 80%;
+    margin: 0;
+    margin-top: -100px;
+  }
+  .right2 h2{
+    font-size: 30px;
+  }
+
+  .right2 li{
+    font-size: 16px;
+    line-height: 1;
+
+  }
+}
+
+@media (max-width:500px){
+  .right2 h2{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .right li{
+    font-size: 15px;
+    line-height: 1;
+  }
+  .right h2{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .right2 li{
+    font-size: 15px;
+    line-height: 1;
+  }
+}
+.ophold-img img{
+  width: 400px;
+  height: 400px;
+}
+
+.ophold-info hr{
+  margin: 20px;
+  background:#3f4638;
+  height: 1px;
+  max-width: 200px;
+  border: none;
+}
+
+.ophold-info{
+  padding:40px;
+  height:100%;
+  background-color: #EEEEEE;;
+}
+
+.ophold-info h1{
+  font-size: 60px;
+  font-family: tangerine, cursive;
+}
+
+.ophold-info h3{
+  font-size: 16px;
+  line-height:1.7;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  padding: 5px;
+  font-weight: 500;
+}
+
+.container{
+    background:#e8e2d0;
+    display: flex;
+    flex-direction: column;
+    padding: 30px;
+    margin: 20px;
+    margin-bottom: 100px;
+}
+
+.ophold h2{
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+
+.ophold h5{
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.ophold li{
+  font-size: 16px;
+  line-height: 1.8;
+}
+.pris-w p{
+  font-size: 20px;
+  font-weight: bold;
+  margin-top: 30px;
+  text-align: center;
+}
+
+.tillæg{
+  background: #EEEEEE;;
+  width: 100%;
+}
+.ophold{
+  width: 90%;
+  padding-left: 50px;
+  padding-bottom: 70px;
+  padding-top: 50px;
+}
+
+/*opholdslut*/
+
+/*menu*/
+
+.menu{
+  margin: 20px;
+  height:100%;
+}
+
+.menu h1{
+  font-size: 60px;
+  padding-bottom: 30px;
+  font-family: tangerine,cursive;
+}
+
+.menu h5{
+  font-size: 20px;
+  padding-bottom: 30px;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.menuindhold{
+  margin:5px;
+  padding: 10px;
+  background-color:#e8e2d0;
+}
+.pris{
+  float: right;
+  font-size: 16px;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.understreget{
+  border-bottom: 2px dotted black;
+  padding-bottom: 2px;
+  margin-bottom: 3px;
+}
+
+.menuindhold h3{
+  font-size: 30px;
+  text-align: center;
+  padding: 30px;
+}
+
+.menuindhold p{
+display: block;
+margin-block-start: 1em;
+margin-block-end: 1em;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
+font-size: 16px;
+}
+
+.overskrift-menu{
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+/*menu slut*/
+
+
+/*vaerelser start*/
+.section {
+  width: 300px;
+  height: 100vh;
+  display: flex;
+  background: #ededed;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.room-gallery {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.room-description {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #e2d2c0;
+  color: rgb(41, 41, 41);
+}
+.room-description h1 {
+  padding: 10px;
+  font-size: 40px;
+}
+.room-description p {
+  font-size: 20px;
+}
+
+.gallery-hightlight {
+  width: 325px;
+  height: 50%;
+}
+
+.room-preview {
+  display: flex;
+  width: 325px;
+  border: 2px solid #d3baa0;
+}
+.room-preview img {
+  flex-grow: 1;
+  height: 100px;
+  width: 30px;
+  opacity: 0.5;
+  transition: opacity 0.4s ease;
+  cursor: pointer;
+}
+
+img.room-active {
+  opacity: 1;
+}
+/*kontakt*/
+
+
+
+/*footer*/
+
+
+.main{
+  width: 100%;
+  height: auto;
+  min-height: 400px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #6D6D64;
+  padding: 15px;
+}
+@media (min-width:1000px){
+  .main{
+    padding-left: 60px;
+    padding-right: 60px;
+  }
+}
+
+.links{
+padding: 30px 20px;
+}
+
+.links:nth-child(1){
+  flex: 30%;
+}
+.links:nth-child(2){
+flex:  25%;
+}
+.links:nth-child(3){
+  flex:45%;
+}
+
+.links iframe{
+  width: 100%;
+  height: 100%;
+}
+.links h6{
+  font-size: 20px;
+  color: white;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.links p{
+  font-size: 15px;
+  text-decoration: none;
+  color: white;
+  transition: 0.3s ease;
+  line-height: 35px;
+  font-weight: 400;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+.copyright{
+  font-size: 12px;
+  text-align: center;
+  color:white;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+  bottom: 0;
+  padding-top: 18px;
+  padding-bottom:18px;
+  background-color: #6D6D64;
+  font-weight: 400;
+}
+
+@media only screen and (max-width:420px){
+  .links:nth-child(1){
+    flex: 50%;
+  }
+  .links:nth-child(2){
+  flex:  50%;
+  }
+  .links:nth-child(3){
+    flex:100%;
+  }
+}
+
+/*footer slut*/
+
+/*kontakt os*/
+
+.banner-kontakt{
+  width: 100%;
+  height: 400px;
+  background-image: url(./billeder/facade.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+.kontakt-side{
+  padding:40px;
+  padding-bottom: 100px;
+  background-color: #EEEEEE;
+}
+
+.kontakt-side h1{
+  font-size: 60px;
+  font-family: tangerine, cursive;
+  padding-top: 20px;
+  color: black;
+  font-weight: 300;
+}
+
+.kontakt-side hr{
+  margin: 20px;
+  background:#3f4638;
+  height: 1px;
+  max-width: 200px;
+  border: none;
+}
+
+.kontakt-side h3{
+  font-size: 18px;
+  padding-top: 10px;
+  padding-bottom: 15px;
+  line-height: 1.7;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.kontakt h6{
+  font-size: 16px;
+  padding-bottom: 15px;
+  padding-top:20px;
+  font-weight: bold;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+.kontakt p{
+  font-size: 14px;
+  line-height: 35px;
+  font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+}
+
+/*kontakt os slut*/
+.banner-vaerelser{
+    width: 100%;
+    height: 400px;
+    background-image: url(./billeder/vaerelser-header.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+@media (max-width:750px){
+  .image{
+    flex: 100%;
+    max-width: 480px;
+  }
+}
+@media (max-width:400px){
+  .image .beskrivelse p{
+    font-size: 16px;
+  }
+  .more .read.more{
+    font-size: 18px;
+  }
+}
+
+
+@media screen and (min-width:700px) {
+  .container{
+    max-width: 700px;
+  }
+}
+
+@media screen and (min-width:1000px){
+  #selskaber{
+    padding: 80px;
+    height:100%;
+  }
+  .restaurant{
+    padding: 80px;
+    height:100%;
+  }
+  .container{
+    padding: 80px;
+    height:100%;
+  }
+  .ophold-info{
+    padding: 80px;
+    height:100%;
+  }
+  .kontakt-side{
+    padding: 80px;
+    height:100%;
+  }
+  #section1 #section2{
+    padding: 80px;
+    height:100%;
+  }
+}
+
+
+
+/* vinkort start*/
+
+.banner-vin {
+  width: 100%;
+    height: 59vh;
+    object-fit: cover;
+  }
+
+  .header-big{
+    color: white;
+    position: absolute;
+    left: 50%;
+    top: 33%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    font-size: 7rem;
+    font-family:gioviale, sans-serif;
+    font-weight: 300;
+  }
+
+  .header-small{
+    top: 44%;
+    font-size: 30px;
+    font-style: italic;
+    position: absolute;
+    left: 50%;
+    color: white;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    font-family: parisplus-clair;
+  }
+
+
+@media (max-width:580px){
+  .header-big{
+    font-size: 4rem;
+  }
+  .header-small{
+    font-size: 18px;
+  }
+}
+.referencer {
+    width: 100vw;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    margin-top: 10rem;
+    opacity: 0.5;
+}
+
+/* ----- Header -----*/
+.header-small {
+    white-space: nowrap;
+}
+
+/* ----- Se Menukort knap -----*/
+.flex-knap {
+    display: flex;
+    justify-content: end;
+    padding-top: 1.2rem;
+    margin-right: 2em;
+}
+
+.cocktail-section a {
+    text-decoration: none;
+    color: #F0F0EB;
+    background-color: #889B7F;
+    font-size: 1.15rem;
+    font-family:parisplus-std, sans-serif;
+    font-weight: 400;
+    padding-left: 2.0rem;
+    padding-right: 0.8rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    border-bottom-left-radius: 60px;
+    text-align: center;
+}
+
+.cocktail-section a:hover{
+    background-color: #476948;
+}
+
+.cocktail-section a:focus {
+    background-color: #476948;
+}
+
+/* ----- Before Dinner Cocktails -----*/
+.cocktail-section {
+    background-color: #F0F0EB;
+    padding-bottom: 2rem;
+    width: 100vw;
+}
+
+.wine-section{
+    color: #889B7F;
+    font-family:parisplus-std, sans-serif;
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 1.3rem;
+    margin-bottom: 1.8rem;
+}
+
+.menu-item-size {
+    font-style: italic;
+    text-align: end;
+    margin-right: 1.5rem;
+    font-size: 1rem;
+    color: #476948;
+    font-family:parisplus-std, sans-serif;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 1.5rem;
+    border-bottom: solid #707070 1px;
+    margin-bottom: 1.7rem;
+    align-items: flex-end;
+}
+
+.product{
+    font-size: 1rem;
+    color: #889B7F;
+}
+
+.price {
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-family: parisplus-std, sans-serif;
+    color: #476948;
+}
+
+.show-on-web {
+    display: none;
+}
+
+.menu-h3-fix {
+    font-size: 1.1rem;
+    margin-left: 0rem;
+    padding-right: 1rem;
+    font-family: parisplus-std, sans-serif;
+    font-weight: 400;
+}
+
+/* ----- Champagne og andre bobler -----*/
+.champagne-section {
+    background-color:#d8d5cd;
+    padding-bottom: 2rem;
+}
+
+.h2-dark-green {
+    color: #476948;
+}
+
+.menu-h3 {
+    font-size: 1rem;
+    margin-left: 1.5rem;
+    padding-right: 7rem;
+    font-family: parisplus-std, sans-serif;
+    font-weight: 400;
+}
+
+.product-undertitle {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* ----- Hvidvin -----*/
+.hvidvin-section {
+    background-color: #F0F0EB;
+    padding-bottom: 2rem;
+}
+
+/* ----- Rosevin -----*/
+.rosevin-section {
+    background-color: #d8d5cd;
+    padding-bottom: 2rem;
+}
+
+/* ----- Rødvin -----*/
+.rodvin-section {
+    background-color: #F0F0EB;
+    padding-bottom: 2rem;
+}
+
+/* ----- Dessertvin -----*/
+.dessertvin-section {
+    background-color:#d8d5cd;
+    padding-bottom: 2rem;
+}
+
+/* ----- Øl og Sodavand -----*/
+.sodavand-section {
+    background-color: #F0F0EB;
+    padding-bottom: 2rem;
+}
+
+/* ------ MEDIA QUERY ------ */
+
+/* Media Query for Tablet */
+@media only screen and (min-width: 700px) {
+    .product-undertitle, .price{
+        font-size: 1.2rem;
+    }
+    .menu-h3{
+        font-size: 1.3rem;
+    }
+    .dish-type{
+        font-size: 1.4rem;
+    }
+    .menu-section{
+        font-size: 1.6rem;
+    }
+    .web-columns{
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+
+/* Media Query for Web */
+@media only screen and (min-width: 1150px) {
+
+    .web-columns {
+        display: flex;
+        justify-content: space-evenly;
+        padding-left: 15rem;
+        padding-right: 15rem;
+    }
+
+    /* ----- Before Dinner Cocktails -----*/
+    .cocktail-section {
+        padding-bottom: 5rem;
+    }
+
+    .cocktail-section a {
+        font-size: 1.9rem;
+        padding-left: 4.5rem;
+        padding-right: 0.8rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        border-bottom-left-radius: 60px;
+        text-align: center;
+        margin-right: 8.8rem;
+    }
+
+    .cocktail-section h2{
+        color: #889B7F;
+        font-family: parisplus-std, sans-serif;
+        text-align: center;
+        margin-top: -0.6rem;
+        font-size: 1.9rem;
+        margin-bottom: 3rem;
+    }
+
+    .menu-item {
+        margin-inline: 2.3rem;
+        width: 32vw;
+        margin-bottom: 1.3rem;
+    }
+
+    .menu-item-size {
+        margin-top: -0.5rem;
+        margin-right: 2rem;
+        font-size: 1.3rem;
+    }
+
+    .product{
+        font-size: 1.3rem;
+    }
+
+    .price {
+        font-size: 1.3rem;
+        font-weight: 700;
+        font-family: parisplus-std, sans-serif;
+        color: #476948;
+    }
+
+    .menu-h3-fix {
+        font-size: 1.3rem;
+    }
+
+    .show-on-web {
+        display: block;
+    }
+
+    /* ----- Champagne og andre bobler -----*/
+    .champagne-section {
+        padding-bottom: 5rem;
+    }
+
+    .h2-dark-green{
+        padding-top: 2.5rem;
+        font-size: 1.9rem;
+        margin-bottom: 3rem;
+        color: #476948;
+    }
+
+    .menu-h3 {
+        font-size: 1.3rem;
+        margin-left: 2.4rem;
+        padding-right: 12rem;
+    }
+
+    .product-undertitle {
+        font-size: 1.3rem;
+    }
+
+    /* ----- Hvidvin -----*/
+    .hvidvin-section {
+        padding-bottom: 5rem;
+    }
+
+    .hvidvin-section h2 {
+        margin-top: -0.6rem;
+        font-size: 1.9rem;
+        margin-bottom: 3rem;
+    }
+
+    /* ----- Rosévin -----*/
+    .rosevin-section {
+        padding-bottom: 5rem;
+    }
+
+    .rosevin-section h2 {
+        margin-top: -0.6rem;
+        font-size: 1.9rem;
+        margin-bottom: 3rem;
+    }
+
+    /* ----- Rødvin -----*/
+    .rodvin-section {
+        padding-bottom: 5rem;
+    }
+
+    .rodvin-section h2 {
+        margin-top: -0.6rem;
+        font-size: 1.9rem;
+        margin-bottom: 3rem;
+    }
+
+    /* ----- Dessertvin -----*/
+    .dessertvin-section {
+        padding-bottom: 5rem;
+    }
+
+    .dessertvin-section h2 {
+        margin-top: -0.6rem;
+        font-size: 1.9rem;
+        margin-bottom: 3rem;
+    }
+
+    /* ----- Øl og Sodavand -----*/
+    .sodavand-section {
+        padding-bottom: 5rem;
+    }
+
+    .sodavand-section h2 {
+        margin-top: -0.6rem;
+        font-size: 1.9rem;
+        margin-bottom: 3rem;
+    }
+
+    /* ----- Billede Section -----*/
+    .billede-section {
+        background-color: #F0F0EB;
+        display: flex;
+        justify-content: space-evenly;
+        padding-bottom: 4rem;
+    }
+
+    .billede-section img {
+        width: 25vw;
+        height: auto;
+    }
+}
+
+
+
+/*menukort start*/
+
+.banner-menu{
+    width: 100%;
+      height: 59vh;
+      object-fit: cover;
+    }
+.referencer {
+    width: 100vw;
+    height: auto;
+    position: fixed;
+    bottom: 0;
+    margin-top: 10rem;
+    opacity: 0.5;
+}
+
+/* ----- Header -----*/
+.header-small {
+    white-space: nowrap;
+}
+
+/* ----- Se Menukort knap -----*/
+.flex-knap {
+    display: flex;
+    justify-content: end;
+    padding-top: 1.2rem;
+    margin-right: 2em;
+}
+
+.forretter-section a {
+    text-decoration: none;
+    color: #F0F0EB;
+    background-color: #889B7F;
+    font-size: 1.15rem;
+    font-family: parisplus-std, sans-serif;
+    font-weight: 400;
+    padding-left: 2.0rem;
+    padding-right: 0.8rem;
+    padding-top: 0.3rem;
+    padding-bottom: 0.3rem;
+    border-bottom-left-radius: 60px;
+    text-align: center;
+
+}
+
+.forretter-section a:hover{
+    background-color: #476948;
+}
+
+.forretter-section a:focus {
+    background-color: #476948;
+}
+
+/* ----- Forretter -----*/
+
+
+.menu-section{
+    color: #889B7F;
+    font-family: parisplus-std, sans-serif;
+    text-align: center;
+    padding-top: 2rem;
+    font-size: 1.3rem;
+    margin-bottom: 1.8rem;
+}
+
+.menu-item-size {
+    font-style: italic;
+    padding-bottom: 10px;
+    text-align: end;
+    margin-right: 1.5rem;
+    font-size: 1rem;
+    color: #476948;
+    font-family: parisplus-std, sans-serif;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    margin-inline: 1.5rem;
+    border-bottom: solid #707070 1px;
+    margin-bottom: 1.7rem;
+    align-items: flex-end;
+}
+
+.product{
+    font-size: 1rem;
+    color: #889B7F;
+}
+
+.price {
+    font-size: 0.9rem;
+    font-weight: 700;
+    font-family: parisplus-std, sans-serif;
+    color: #476948;
+}
+
+.show-on-web {
+    display: none;
+}
+
+.only-on-mobile {
+    display: flex;
+    justify-content: center;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+}
+
+.only-on-mobile img {
+    width: 85vw;
+    height: auto;
+}
+
+.menu-h3-fix {
+    font-size: 1.1rem;
+    margin-left: 0rem;
+    padding-right: 1rem;
+    font-family: parisplus-std, sans-serif;
+    font-weight: 400;
+}
+
+/* ----- Hovedretter -----*/
+.hovedretter-section {
+    background-color: #d8d5cd;
+    padding-bottom: 2rem;
+}
+
+.h2-dark-green {
+    color: #476948;
+}
+
+.dish-type {
+    font-size: 1.1rem;
+    margin-left: 1.5rem;
+    margin-bottom: 1.7rem;
+    text-decoration: underline;
+    font-style: italic;
+    font-family: parisplus-std, sans-serif;
+    font-weight: 400;
+}
+
+.dish-type-whitespace {
+    padding-top: 2rem;
+}
+
+.menu-h3 {
+    font-size: 1rem;
+    margin-left: 1.5rem;
+    padding-right: 7rem;
+    font-family:parisplus-std, sans-serif;
+    font-weight: 400;
+}
+
+.product-undertitle {
+    font-size: 1rem;
+    font-style: italic;
+}
+
+/* ----- Hovedretter -----*/
+.hovedretter-section {
+    background-color:#d8d5cd;
+    padding-bottom: 2rem;
+}
+
+.hovederetter-billeder {
+    background-color: #d8d5cd;
+}
+
+/* ----- 2-retters menuer -----*/
+.to-retters-section {
+    background-color: #F0F0EB;
+    padding-bottom: 2rem;
+}
+.frokost-h3{
+font-size: 1rem;
+    font-family: parisplus-std, sans-serif;
+    font-weight: 400;
+    margin-left: 0;
+    padding-top: 0.7rem;
+    padding-bottom: 0.7rem;
+    line-height: 1.6;
+  }
+.menu-border {
+    border: solid #707070 1px;
+    padding-block: 0.5rem;
+    padding-inline: 0.8em;
+    margin-inline: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.to-retters-flex {
+    display: flex;
+    justify-content: space-between;
+    padding-inline: 0.2em;
+}
+
+.to-retters-h3 {
+    font-size: 1rem;
+    font-family: parisplus-std, sans-serif;
+    font-weight: 400;
+    margin-left: 0;
+    padding-top: 0.7rem;
+}
+.forretter-section .frokost{
+  text-align: center;
+  font-size: 1rem;
+  font-family: parisplus-std, sans-serif;
+  font-weight: 600;
+  margin-left: 0;
+  padding-top: 0.7rem;
+  padding-bottom: 20px;
+}
+
+.to-retters-item {
+    margin: 0;
+}
+
+
+/* ----- Børneretter -----*/
+.borne-retter-section {
+    background-color: #d8d5cd;
+    padding-bottom: 2rem;
+}
+
+/* ----- Desserter og ost -----*/
+.dessert-section {
+    background-color: #F0F0EB;
+    padding-bottom: 2rem;
+}
+/* ------ MEDIA QUERY ------ */
+
+/* Media Query for Tablet */
+@media only screen and (min-width: 744px) {
+    .product-undertitle, .price{
+        font-size: 1.2rem;
+    }
+    .menu-h3{
+        font-size: 1.3rem;
+    }
+    .dish-type{
+        font-size: 1.4rem;
+    }
+    .menu-section{
+        font-size: 1.6rem;
+    }
+    .web-columns{
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+}
+
+/* Media Query for Web */
+@media only screen and (min-width: 1150px) {
+
+    .web-columns {
+        display: flex;
+        justify-content: space-evenly;
+        padding-left: 8rem;
+        padding-right: 8rem;
+        padding-bottom: 100px;
+    }
+
+
+
+
+    /* ----- Forretter -----*/
+    .forretter-section {
+        padding-bottom: 5rem;
+    }
+
+    .forretter-section a {
+        font-size: 1.9rem;
+        padding-left: 4.5rem;
+        padding-right: 0.8rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.3rem;
+        border-bottom-left-radius: 60px;
+        text-align: center;
+        margin-right: 8.8rem;
+    }
+
+    .forretter-section h2{
+        color: #889B7F;
+        font-family: parisplus-std, sans-serif;
+        text-align: center;
+        margin-top: -0.6rem;
+        font-size: 1.8rem;
+        margin-bottom: 3rem;
+    }
+
+    .menu-item {
+        margin-inline: 2.3rem;
+        width: 32vw;
+        margin-bottom: 1.3rem;
+    }
+
+    .menu-item-size {
+        margin-right: 3.3rem;
+        margin-top: -0.5rem;
+        font-size: 1.3rem;
+    }
+
+    .product{
+        font-size: 1.3rem;
+    }
+
+    .price {
+        font-size: 1.3rem;
+        font-weight: 700;
+        font-family: parisplus-std, sans-serif;
+        color: #476948;
+    }
+
+    .menu-h3-fix {
+        font-size: 1.3rem;
+    }
+
+    .show-on-web {
+        display: block;
+    }
+
+    .only-on-mobile {
+        display: none;
+    }
+
+    .h2-dark-green{
+        padding-top: 2.5rem;
+        font-size: 1.9rem;
+        margin-bottom: 3rem;
+        color: #476948;
+    }
+
+    .dish-type-whitespace {
+        padding-top: 2rem;
+    }
+
+    .menu-h3 {
+        font-size: 1.3rem;
+        margin-left: 2.4rem;
+        padding-right: 12rem;
+    }
+
+    .product-undertitle {
+        font-size: 1.3rem;
+    }
+    /* ----- 2-retters menuer -----*/
+    .to-retters-section {
+        padding-bottom: 5rem;
+    }
+
+    .to-retters-section h2 {
+        margin-top: -0.6rem;
+        font-size: 1.9rem;
+        margin-bottom: 3rem;
+    }
+
+    .menu-border {
+        border: solid #707070 1px;
+        padding-block: 1.5rem;
+        padding-inline: 0.8em;
+        margin-inline: 1.5rem;
+        margin-bottom: 1rem;
+        width: 30vw;
+        min-width: 500px;
+    }
+
+    .to-retters-flex {
+        display: flex;
+        justify-content: space-between;
+        padding-inline: 0.2em;
+    }
+
+    .to-retters-h3 {
+        font-size: 1.3rem;
+        padding-top: 1.5rem;
+    }
+
+
+    /* ----- Børneretter -----*/
+    .borne-retter-section {
+        padding-bottom: 5rem;
+    }
+
+    /* ----- Desert og ost -----*/
+    .dessert-section {
+        padding-bottom: 5rem;
+    }
+
+    .dessert-section h2 {
+        margin-top: -0.6rem;
+        font-size: 1.9rem;
+        margin-bottom: 3rem;
+    }
+
+    .desert-billeder {
+        display: flex;
+        justify-content: space-evenly;
+        padding-bottom: 0rem;
+        padding-top: 3rem;
+    }
+
+    .desert-billeder img {
+        width: 25vw;
+        height: auto;
+    }
+}
